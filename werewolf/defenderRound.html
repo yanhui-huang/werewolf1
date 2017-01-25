@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="src/ctrl/initialize.js"></script>
+  <script src="src/model/game.js"></script>
+  <script src = "src/model/GameMethod.js"></script>
+  <script src="src/model/player.js"></script>
+  <script src = "src/view/defenderRound.js"></script>
+  <script>
+   window.addEventListener("load",
+       pl.view.defenderRound.setupUserInterface);
+  </script>
+  <style>
+body {
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: white;
+}
+input {
+    width: 150px;
+    padding: 5px 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+button{
+  height:30px;
+  width:80px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid;
+}
+  </style>
+</head>
+
+<h1>狼人杀v0.1</h1>
+<p id = "night" style="font-size:22px"></p>
+<p style="color:red;font-size:18px">守卫请睁眼</p>
+
+<label id = "showTEXT"></label>
+<form id= "frmDefenderID">
+</form>
+<form id = "frmGuardID">请输入要守卫的人的号码<br>
+  <input type = "number" id = "GuardID"><br>
+</form>
+<br>
+<button type = "button" id = "btnNext" style="height:40px;width:100px">
+  守卫请闭眼</button>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="src/ctrl/initialize.js"></script>
+  <script src="src/model/game.js"></script>
+  <script src = "src/model/GameMethod.js"></script>
+  <script src="src/model/player.js"></script>
+  <script src = "src/view/results.js"></script>
+  <script>
+   window.addEventListener("load",
+       pl.view.results.setupUserInterface);
+  </script>
+  <style>
+body {
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: white;
+}
+div.ex0{
+  padding: 10px 0 15px 0px;
+}
+div.ex1{
+  background-color:purple;
+  color:white;
+  padding: 10px 50px 15px 50px;
+  width:300px;
+}
+div.ex2{
+  background-color:red;
+  color:white;
+  width:300px;
+}
+button.ex1{
+  height:40px;
+  width:100px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid;
+}
+input {
+    width: 100px;
+    padding: 0px 0px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+  </style>
+</head>
+
+<h1>狼人杀v0.1</h1>
+<h2 id = 'intro'></h2>
+
+<form id= "frmSheriff"></form>
+<button class= 'ex1' type = "button" id = "btnShow" style="height:40px;width:120px">
+  宣布上一晚结果</button>
+<p id = 'results'></p>
+
+<div class = 'ex0'>
+请输入要投死的玩家号码
+<input type = 'number' id = 'vote'>
+<button type = "button" id = "btnV2Die">确认</button><br>
+<label id = 'lastword'></label>
+<br>
+</div>
+
+<div class = 'ex1'>
+<p>如有狼人自爆，请直接输入</p>
+<form id ='frmwolf'>
+<input type = "number" id = "wolf" 
+ placeholder="自爆狼号码" max = '20'>
+<button type = "button" id = "btnSuicide">狼人自爆</button><br><br>
+<label id = 'wolfInfo'></label><br>
+</form>
+</div>
+
+<div class = 'ex2' id = 'divHunter'>
+<label id = 'hunter'></label>
+<form id = 'frmhunter'></form>
+<label id = 'isSucceed'></label>
+</div>
+
+<br>
+<button class= 'ex1' type = "button" id = "btnRes" style="color:blue;">
+  计算游戏结果</button>
+<button class= 'ex1' type = "button" id = "btnNext"style="height:40px;width:100px">
+  进入下一晚</button>
+<p id = 'isOver'></p>
+<br>
+<button class= 'ex1' type='button' style="color:white;background-color:red;"
+onclick="location.href='start.html'">重新开始</button>

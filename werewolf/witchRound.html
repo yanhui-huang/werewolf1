@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="src/ctrl/initialize.js"></script>
+  <script src="src/model/game.js"></script>
+  <script src = "src/model/GameMethod.js"></script>
+  <script src="src/model/player.js"></script>
+  <script src = "src/view/witchRound.js"></script>
+  <script>
+   window.addEventListener("load",
+       pl.view.witchRound.setupUserInterface);
+  </script>
+  <style>
+body {
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: white;
+}
+button{
+  height:30px;
+  width:80px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid;
+}
+input {
+    width: 150px;
+    padding: 5px 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+input[type=radio] {
+    width: 25px;
+    padding: 10px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+  </style>
+</head>
+
+<h1>狼人杀v0.1</h1>
+<p id = "night"></p>
+<p style="color:red;font-size:18px;">女巫请睁眼</p>
+<label id = "showTEXT"></label>
+<form id= "frmWitchID"></form>
+<br>
+<label id = "showDead"></label>
+请选择使用解药还是毒药
+<label id = "explain"></label>
+<form id= "frmChoose">
+  <br>
+  <input  type = 'radio' name = 'choose'
+  id ='cure' value = 'cure'>解药<br>
+  <input  type = 'radio' name = 'choose'
+  id ='poison' value = 'poison'>毒药<br>
+</form>
+
+<form id = "frmPoisonID"></form>
+<br>
+<button type = "button" id = "btnNext" style="height:40px;width:100px">
+  女巫请闭眼</button>
