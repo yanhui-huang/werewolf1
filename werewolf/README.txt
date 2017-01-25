@@ -1,6 +1,6 @@
 狼人杀上帝辅助程序v0.1 网页版
 
-Author: Yanhui Huang
+Author: Yanhui Huang, Troy, NY
 Date: 01/26/2017
 
 使用说明，
